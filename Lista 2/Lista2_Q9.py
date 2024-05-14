@@ -51,7 +51,6 @@ for i in range (1,num_musicas+1,1):
             tentativas-=1
 
         print(f'Resposta atual: {forca}')
-        print(f'Tentativas restantes:{tentativas}')
 
 #checando se o usuário acertou a música
     if forca==musica:
