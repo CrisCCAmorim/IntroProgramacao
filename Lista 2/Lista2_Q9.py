@@ -41,16 +41,18 @@ for i in range (1,num_musicas+1,1):
         if tem_letra==True:
             if tinha_letra==False: 
                 print('Uhuuuuu! Consegui adivinhar uma letra!')
-                tem_letra=False
                 tentativas-=1
             else:
                 print('Já tinha colocado essa letra antes, preciso de mais atenção.')
                 tinha_letra=False
+                tentativas-=1
+            tem_letra=False
         else:
             print(f'Eita! Parece que a letra {letra} não está na música secreta!')
             tentativas-=1
 
         print(f'Resposta atual: {forca}')
+       
 
 #checando se o usuário acertou a música
     if forca==musica:
@@ -66,5 +68,7 @@ if taxa_acerto<=0.5:
     print('Poxa, eu conseguiria ter ido bem melhor, vou escutar todos os álbuns em repeat!')
 elif taxa_acerto>0.5 and taxa_acerto<=0.75:
     print('Foi um bom resultado, vou começar a escutar mais músicas do Kanye West.')
-elif taxa_acerto>0.75 and taxa_acerto<=1:
+elif taxa_acerto>0.75 and taxa_acerto<1:
+    print('Estou quase chegando na perfeição! Só não consegui porque não gosto de todos os álbuns.')
+elif taxa_acerto==1:
     print('Eu sou o próprio Kanye West.')
